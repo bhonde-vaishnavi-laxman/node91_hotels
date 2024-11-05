@@ -14,7 +14,7 @@ app.use(bodyParser.json());
   
 
 
-app.listen(4000,()=>{
+app.listen(6000,()=>{
     console.log("this is runing the server");
 })
 
