@@ -1,5 +1,5 @@
 const express=require('express');
-const router = express .Router();
+const router = express.Router();
 const menuItema =require('./../model/menuitem');
 
 
@@ -60,4 +60,4 @@ router.post('/',async(req,res)=>{
 
   });
 
-  model.export= router;
+  module.exports = router;

@@ -1,5 +1,5 @@
 const express =require('express');
-const router = express .Router();
+const router = express.Router();
 const person=require('./../model/person');
 
 
@@ -53,4 +53,4 @@ router.get('//:workType',async(req ,res)=>{
     }
 });
 //export the code in this
-module.export=router;
+module.exports=router;
