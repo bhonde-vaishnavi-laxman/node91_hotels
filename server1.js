@@ -1,9 +1,10 @@
 const express=require('express');
 const app=express();
 const db=require('./db');
-
+require('dotenv').config();
 const bodyParser =require ('body-parser');
 app.use(bodyParser.json());
+const PORT =process.env.PORT ||1000;
 
 //router file
   const personrouter = require('./router/personrouter');
@@ -14,7 +15,7 @@ app.use(bodyParser.json());
   
 
 
-app.listen(1000,()=>{
+app.listen(PORT,()=>{
     console.log("this is runing the server");
 })
 
