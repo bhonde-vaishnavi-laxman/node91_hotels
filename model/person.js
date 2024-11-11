@@ -24,8 +24,15 @@ const personSchema =new mongoose.Schema({
     salary:{
         type:Number,
         required:true
+    },
+    username:{
+        type:String,
+        required:true,
+    },
+    password:{
+        type:String,
+        required:true,
     }
-    
 });
 //cereating the person model
 const person =mongoose.model('person',personSchema);

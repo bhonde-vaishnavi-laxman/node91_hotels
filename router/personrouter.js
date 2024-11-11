@@ -1,15 +1,26 @@
 const express =require('express');
 const router = express.Router();
 const person=require('./../model/person');
+const {jwtAuthMiddleware,generateToken} = require('./../jwt');
 
-
-
-router.post('/',async(req ,res)=>{
+router.post('/signup',async(req ,res)=>{
     try{
         const data=req.body
         const newPerson =new person(data);
         const response = await newPerson.save();
-        res.status(200).json(response);
+        const payload={
+            id:response.id,
+            username:response.username
+        }
+        console.log(json.stringify (payload));
+        const token =generateToken(payload);
+        console.log("token is:",token);
+
+
+
+
+
+        res.status(200).json({response:response,   token:token});
     }catch(err){
         console.log("err");
         res.status(500).json({
@@ -53,4 +64,4 @@ router.get('//:workType',async(req ,res)=>{
     }
 });
 //export the code in this
-module.exports=router;
+module.exports = router;

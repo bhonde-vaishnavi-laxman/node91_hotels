@@ -1,7 +1,7 @@
 const mongoose=require('mongoose');
 require('dotenv').config();
  //mongoose in install npm i mongoose
-//const mongoURL= process.envLOCAL_URL;// define the bmongoDB connection URL step1:local data
+//const mongoURL= process.LOCAL_URL;// define the bmongoDB connection URL step1:local data
 const mongoURL = process.env.MONGODB_URL; //online data is storing in using mongo altas
 //chnage ther name of HOTELS (like company college .etc)
 //set a mongoDB connection step:2
